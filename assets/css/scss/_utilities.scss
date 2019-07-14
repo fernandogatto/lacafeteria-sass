@@ -48,3 +48,5 @@
 %flex-justify-content-flex-end { justify-content: flex-end; }
 %flex-justify-content-space-around { justify-content: space-around; }
 %flex-justify-content-space-between { justify-content: space-between; }
+
+%vertical-align { position: relative; top: 50%; transform: perspective(1px) translateY(-50%); }

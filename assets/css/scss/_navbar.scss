@@ -1,50 +1,100 @@
-header {
-    padding: 20px 0;
-    background: $light;
-    a {
-        @extend %no-text-decoration;
-    }
+.visible {
+    display: block !important;
 }
 
-.navbar {
+nav.mobile-menu {
     @extend %d-flex;
-    @extend %flex-direction-column;
     @extend %flex-justify-content-space-between;
-    @include device(l) {
-        flex-direction: row;
-    }
-    .logo {
-        @include font-secondary(2.125em);
+    @extend %flex-align-items-center;
+	background: $light;
+	box-sizing: border-box;
+	width: 100%;
+	height: 70px;
+	padding: 0 16px;
+	.logo {
+        @extend %no-text-decoration;
+        @include font-secondary(2.25em);
         color: $dark;
-    }
-}
-
-
-.navbar-collapse {
-    @include device(l) {
-        width: auto;
-        border-top: 0;
-    }
-    ul {
-        list-style: none;
-        @include device(l) {
-            display: flex;
-            flex-direction: row;
-        }
-        li {
-            padding-top: 10px;
-            @include device(l) {
-                padding-left: 30px;
-            }
-            a {
-                @include font-secondary(1.125em);
-                color: $dark;
-                transition: .3s;
-                &:hover {
-                    color: $primary;
+	}
+    .mobile-menu-overlay {
+        @extend %position-fixed;
+        @extend %text-align-center;
+        @extend %d-none;
+        z-index: 1000;
+        width: 100%;
+        height: 100vh;
+        background: $light;
+        top: 0;
+        left: 0;
+        ul {
+            @extend %vertical-align;
+            @include font-secondary(1.5em);
+            line-height: 36px;
+            li {
+                margin-bottom: 24px;
+                a {
+                    color: $dark;
+                    text-decoration: none;
                     transition: .3s;
+                    &:hover {
+                        color: $primary;
+                        transition: .3s;
+                    }
                 }
             }
         }
     }
+}
+
+// Hamburger
+.hamburger-menu, .hamburger-menu:after, .hamburger-menu:before {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.hamburger-wrapper {
+    @extend %d-block;
+	padding: 12px 0;
+	z-index: 1001;
+}
+
+.hamburger-menu {
+    @extend %position-relative;
+	background: $dark;
+	transition: all 0ms 200ms;
+	@extend %d-block;
+    &.animate {
+        background: $light; 
+    }
+}
+
+.hamburger-menu:before {
+	content: "";
+	@extend %position-absolute;
+	left: 0;
+	bottom: 8px;
+	background: $dark;
+	transition: bottom 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu:after {
+	content: "";
+	@extend %position-absolute;
+	left: 0;
+	top: 8px;
+	background: $dark;
+	transition: top 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:after {
+	top: 0;
+	transform: rotate(45deg);
+	transition: top 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.hamburger-menu.animate:before {
+	bottom: 0;
+	transform: rotate(-45deg);
+	transition: bottom 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms 200ms cubic-bezier(0.23, 1, 0.32, 1);;
 }
