@@ -1,0 +1,94 @@
+// Mixins
+@mixin font-primary($size) {
+    font-family: $font-primary;
+    font-size: $size;
+}
+
+@mixin font-secondary($size)  {
+    font-family: $font-secondary;
+    font-size: $size;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin btn($color) {
+    @include font-secondary(1.125em);
+    @extend %no-text-decoration;
+    @extend %d-block;
+    @extend %text-align-center;
+    max-width: 150px;
+    vertical-align: middle;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: .3s;
+    @if $color == primary {
+        background-color: $primary;
+        color: $light;
+    }
+    @else if $color == dark {
+        background-color: $dark;
+        color: $light;
+    }
+    @else if $color == light {
+        background-color: $light;
+        color: $dark;
+    }
+    &:hover {
+        @include bnt-hover($color);
+    }
+    &:active {
+        transform: translateY(2px);
+    }
+}
+
+@mixin bnt-hover($color) {
+    transition: .3s;
+    @if $color == primary {
+        background-color: darken($primary, 10%);
+    }
+    @else if $color == dark {
+        background-color: darken($dark, 10%);
+    }
+    @else if $color == light {
+        background-color: darken($light, 10%);
+    }
+}
+
+@mixin title-section($color) {
+    @include font-secondary(2em);
+    @extend %text-align-center;
+    color: $color;
+    @include device(s) {
+        font-size: 1.5em;
+    }
+}
+
+@mixin subtitle-section($color) {
+    @include font-secondary(3.5em);
+    @extend %text-align-center;
+    color: $color;
+    @include device(s) {
+        font-size: 2.5em;
+    }
+}
+
+@mixin text-behind-title-section($color) {
+    @include font-secondary(9em);
+    @extend %text-align-center;
+    @extend %position-absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -20px;
+    color: $color;
+    opacity: .05;
+    @include device(m) {
+        font-size: 7em;
+    }
+    @include device(s) {
+        font-size: 4.5em;
+    }
+}

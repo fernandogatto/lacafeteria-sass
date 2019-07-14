@@ -1,0 +1,50 @@
+header {
+    padding: 20px 0;
+    background: $light;
+    a {
+        @extend %no-text-decoration;
+    }
+}
+
+.navbar {
+    @extend %d-flex;
+    @extend %flex-direction-column;
+    @extend %flex-justify-content-space-between;
+    @include device(l) {
+        flex-direction: row;
+    }
+    .logo {
+        @include font-secondary(2.125em);
+        color: $dark;
+    }
+}
+
+
+.navbar-collapse {
+    @include device(l) {
+        width: auto;
+        border-top: 0;
+    }
+    ul {
+        list-style: none;
+        @include device(l) {
+            display: flex;
+            flex-direction: row;
+        }
+        li {
+            padding-top: 10px;
+            @include device(l) {
+                padding-left: 30px;
+            }
+            a {
+                @include font-secondary(1.125em);
+                color: $dark;
+                transition: .3s;
+                &:hover {
+                    color: $primary;
+                    transition: .3s;
+                }
+            }
+        }
+    }
+}

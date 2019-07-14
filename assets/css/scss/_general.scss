@@ -1,0 +1,27 @@
+p {
+    @include font-primary(1.125em);
+}
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.bg-dark {
+    background-color: $dark;
+}
+
+.bg-light {
+    background-color: $light;
+}
+
+.text-primary {
+    color: $primary;
+}
+
+.text-dark {
+    color: $dark;
+}
+
+.text-light {
+    color: $light;
+}

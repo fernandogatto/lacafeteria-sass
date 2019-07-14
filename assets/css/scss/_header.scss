@@ -1,0 +1,38 @@
+.header {
+    background: linear-gradient( rgba(36, 36, 36, .4), rgba(36, 36, 36, .6) ), url('../img/bg-header.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-msg {
+    @extend %position-absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: $light;
+    text-align: center;
+    p {
+        @include font-secondary(7em);
+        padding-bottom: 40px;
+    }
+    .btn {
+        @include btn(primary);
+        margin: 0 auto;
+    }
+    @include device(m) {
+        p {
+            font-size: 5em;
+            padding-bottom: 30px;
+        }
+    }
+    @include device(s) {
+        p {
+            font-size: 3em;
+            padding-bottom: 20px;
+        }
+    }
+}

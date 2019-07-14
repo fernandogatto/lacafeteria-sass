@@ -1,0 +1,557 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.grid-1 {
+  width: calc(8.33333% - 20px);
+}
+
+.grid-2 {
+  width: calc(16.66667% - 20px);
+}
+
+.grid-3 {
+  width: calc(25% - 20px);
+}
+
+.grid-4 {
+  width: calc(33.33333% - 20px);
+}
+
+.grid-5 {
+  width: calc(41.66667% - 20px);
+}
+
+.grid-6 {
+  width: calc(50% - 20px);
+}
+
+.grid-7 {
+  width: calc(58.33333% - 20px);
+}
+
+.grid-8 {
+  width: calc(66.66667% - 20px);
+}
+
+.grid-9 {
+  width: calc(75% - 20px);
+}
+
+.grid-10 {
+  width: calc(83.33333% - 20px);
+}
+
+.grid-11 {
+  width: calc(91.66667% - 20px);
+}
+
+.grid-12 {
+  width: calc(100% - 20px);
+}
+
+[class^="grid-"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 759px) {
+  [class^="grid-"] {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.offset-1 {
+  margin-left: calc(8.33333% + 10px);
+}
+
+.offset-2 {
+  margin-left: calc(16.66667% + 10px);
+}
+
+.offset-3 {
+  margin-left: calc(25% + 10px);
+}
+
+.offset-4 {
+  margin-left: calc(33.33333% + 10px);
+}
+
+.offset-5 {
+  margin-left: calc(41.66667% + 10px);
+}
+
+.offset-6 {
+  margin-left: calc(50% + 10px);
+}
+
+.offset-7 {
+  margin-left: calc(58.33333% + 10px);
+}
+
+.offset-8 {
+  margin-left: calc(66.66667% + 10px);
+}
+
+.offset-9 {
+  margin-left: calc(75% + 10px);
+}
+
+.offset-10 {
+  margin-left: calc(83.33333% + 10px);
+}
+
+.offset-11 {
+  margin-left: calc(91.66667% + 10px);
+}
+
+.offset-12 {
+  margin-left: calc(100% + 10px);
+}
+
+@media screen and (max-width: 759px) {
+  .offset-1, .offset-2, .offset-3, .offset-4, .offset-5, .offset-6, .offset-7, .offset-8, .offset-9, .offset-10, .offset-11, .offset-12 {
+    margin-left: 0px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .container {
+    max-width: 480px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.container::after, .container::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.row {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@media screen and (max-width: 759px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.row::after, .row::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title p, .who-we-are .description p, .services-item, .opening-hours .title h3 {
+  text-align: center;
+}
+
+header a, .main-msg .btn {
+  text-decoration: none;
+}
+
+.main-msg, .who-we-are .title p {
+  position: absolute;
+}
+
+.who-we-are .title {
+  position: relative;
+}
+
+.navbar, .services, .opening-hours {
+  display: flex;
+}
+
+.main-msg .btn {
+  display: block;
+}
+
+.services, .opening-hours {
+  flex-direction: row;
+}
+
+.navbar {
+  flex-direction: column;
+}
+
+.services {
+  flex-flow: row wrap;
+}
+
+.services {
+  justify-content: space-around;
+}
+
+.navbar, .opening-hours {
+  justify-content: space-between;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.125em;
+}
+
+.bg-primary {
+  background-color: #c0aa83;
+}
+
+.bg-dark {
+  background-color: #242424;
+}
+
+.bg-light {
+  background-color: #f6f6f6;
+}
+
+.text-primary {
+  color: #c0aa83;
+}
+
+.text-dark {
+  color: #242424;
+}
+
+.text-light {
+  color: #f6f6f6;
+}
+
+header {
+  padding: 20px 0;
+  background: #f6f6f6;
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar {
+    flex-direction: row;
+  }
+}
+
+.navbar .logo {
+  font-family: "Kanit", sans-serif;
+  font-size: 2.125em;
+  color: #242424;
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+  }
+}
+
+.navbar-collapse ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-collapse ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.navbar-collapse ul li {
+  padding-top: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-collapse ul li {
+    padding-left: 30px;
+  }
+}
+
+.navbar-collapse ul li a {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.125em;
+  color: #242424;
+  transition: .3s;
+}
+
+.navbar-collapse ul li a:hover {
+  color: #c0aa83;
+  transition: .3s;
+}
+
+.header {
+  background: linear-gradient(rgba(36, 36, 36, 0.4), rgba(36, 36, 36, 0.6)), url("../img/bg-header.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-msg {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: #f6f6f6;
+  text-align: center;
+}
+
+.main-msg p {
+  font-family: "Kanit", sans-serif;
+  font-size: 7em;
+  padding-bottom: 40px;
+}
+
+.main-msg .btn {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.125em;
+  max-width: 150px;
+  vertical-align: middle;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: .3s;
+  background-color: #c0aa83;
+  color: #f6f6f6;
+  margin: 0 auto;
+}
+
+.main-msg .btn:hover {
+  transition: .3s;
+  background-color: #af9361;
+}
+
+.main-msg .btn:active {
+  transform: translateY(2px);
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .main-msg p {
+    font-size: 5em;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .main-msg p {
+    font-size: 3em;
+    padding-bottom: 20px;
+  }
+}
+
+.about-us {
+  margin-top: -40px;
+  padding: 60px 0;
+  background: url("../img/bg-bottom-header.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.about-us .content {
+  margin-top: 40px;
+  background: url("../img/bg-about.png");
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
+.who-we-are .title h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  color: #242424;
+}
+
+@media screen and (max-width: 759px) {
+  .who-we-are .title h2 {
+    font-size: 1.5em;
+  }
+}
+
+.who-we-are .title h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3.5em;
+  color: #c0aa83;
+}
+
+@media screen and (max-width: 759px) {
+  .who-we-are .title h3 {
+    font-size: 2.5em;
+  }
+}
+
+.who-we-are .title p {
+  font-family: "Kanit", sans-serif;
+  font-size: 9em;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -20px;
+  color: #242424;
+  opacity: .05;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .who-we-are .title p {
+    font-size: 7em;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .who-we-are .title p {
+    font-size: 4.5em;
+  }
+}
+
+.who-we-are .description p {
+  padding-top: 20px;
+}
+
+.services {
+  padding: 20px 0;
+}
+
+.services-item {
+  border: 5px solid #c0aa83;
+  padding: 20px;
+  margin: 20px 0;
+  width: 240px;
+  height: 240px;
+}
+
+.services-item img {
+  margin: 0 auto;
+}
+
+.services-item h4 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 759px) {
+  .opening-hours {
+    flex-direction: column;
+  }
+}
+
+.opening-hours .title h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  color: #c0aa83;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 759px) {
+  .opening-hours .title h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .opening-hours .title h3 {
+    text-align: center;
+  }
+}
+
+.opening-hours .description p {
+  font-size: 1.5em;
+  color: #c0aa83;
+  font-family: "Kanit", sans-serif;
+}
+
+@media screen and (max-width: 759px) {
+  .opening-hours .description p {
+    text-align: center;
+  }
+}
+
+.opening-hours .description span {
+  color: #242424;
+}
+
+.opening-hours img {
+  height: 400px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .opening-hours img {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .opening-hours img {
+    height: 220px;
+    margin: 20px auto 0 auto;
+  }
+}

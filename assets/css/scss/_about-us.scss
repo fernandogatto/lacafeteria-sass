@@ -1,0 +1,102 @@
+.about-us {
+    margin-top: -40px;
+    padding: 60px 0;
+    background: url('../img/bg-bottom-header.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    .content {
+        margin-top: 40px;
+        background: url('../img/bg-about.png');
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+    }
+}
+
+.who-we-are {
+    .title {
+        @extend %position-relative;
+        h2 {
+            @include title-section($dark);
+        }
+        h3 {
+            @include subtitle-section($primary);
+        }
+        p {
+            @include text-behind-title-section($dark);
+        }
+    }
+    .description {
+        p {
+            @extend %text-align-center;
+            padding-top: 20px;
+        }
+    }
+}
+
+.services {
+    @extend %d-flex;
+    @extend %flex-direction-row;
+    @extend %flex-flow-row-wrap;
+    @extend %flex-justify-content-space-around;
+    padding: 20px 0;
+}
+
+.services-item {
+    @extend %text-align-center;
+    border: 5px solid $primary;
+    padding: 20px;
+    margin: 20px 0;
+    width: $l-device / 5;
+    height: $l-device / 5;
+    img {
+        margin: 0 auto;
+    }
+    h4 {
+        font-family: $font-secondary;
+        font-size: 1.5em;
+        padding: 10px 0;
+    }
+}
+
+.opening-hours {
+    @extend %d-flex;
+    @extend %flex-direction-row;
+    @extend %flex-justify-content-space-between;
+    @include device(s) {
+        flex-direction: column;
+    }
+    .title {
+        h3 {
+            @include title-section($primary);
+            text-align: left;
+            padding-bottom: 20px;
+            @include device(s) {
+                text-align: center;
+            }
+        }
+    }
+    .description {
+        p {
+            font-size: 1.5em;
+            color: $primary;
+            font-family: $font-secondary;
+            @include device(s) {
+                text-align: center;
+            }
+        }
+        span {
+            color: $dark;
+        }
+    }
+    img {
+        height: 400px;
+        object-fit: cover;
+        @include device(m) {
+            height: 220px;
+        }
+        @include device(s) {
+            height: 220px;
+            margin: 20px auto 0 auto;
+        }
+    }
+}
