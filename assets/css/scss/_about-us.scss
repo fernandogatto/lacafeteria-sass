@@ -26,9 +26,9 @@
         }
     }
     .description {
+        margin-top: 20px;
         p {
             @extend %text-align-center;
-            padding-top: 20px;
         }
     }
 }

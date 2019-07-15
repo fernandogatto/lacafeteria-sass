@@ -219,7 +219,7 @@ table {
   clear: both;
 }
 
-nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title p, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title p, .our-menu .btn {
+nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title p, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title p, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title p, .recent-posts .btn {
   text-align: center;
 }
 
@@ -227,15 +227,15 @@ nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .wh
   text-align: left;
 }
 
-nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn {
+nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .posts-item a {
   text-decoration: none;
 }
 
-.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title p, .our-menu .title p {
+.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title p, .our-menu .title p, .recent-posts .title p {
   position: absolute;
 }
 
-.hamburger-menu, .who-we-are .title, .our-menu .title {
+.hamburger-menu, .who-we-are .title, .our-menu .title, .recent-posts .title {
   position: relative;
 }
 
@@ -243,11 +243,11 @@ nav.mobile-menu .mobile-menu-overlay {
   position: fixed;
 }
 
-nav.mobile-menu, .services, .opening-hours, .drinks {
+nav.mobile-menu, .services, .opening-hours, .drinks, .posts {
   display: flex;
 }
 
-.hamburger-wrapper, .hamburger-menu, .main-msg .btn, .our-menu .btn {
+.hamburger-wrapper, .hamburger-menu, .main-msg .btn, .our-menu .btn, .recent-posts .btn {
   display: block;
 }
 
@@ -255,11 +255,11 @@ nav.mobile-menu .mobile-menu-overlay {
   display: none;
 }
 
-.services, .opening-hours, .drinks {
+.services, .opening-hours, .drinks, .posts {
   flex-direction: row;
 }
 
-.services, .drinks {
+.services, .drinks, .posts {
   flex-flow: row wrap;
 }
 
@@ -267,7 +267,7 @@ nav.mobile-menu {
   align-items: center;
 }
 
-.services, .drinks {
+.services, .drinks, .posts {
   justify-content: space-around;
 }
 
@@ -527,8 +527,8 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   }
 }
 
-.who-we-are .description p {
-  padding-top: 20px;
+.who-we-are .description {
+  margin-top: 20px;
 }
 
 .services {
@@ -712,4 +712,142 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 
 .drinks-item p {
   font-size: 1em;
+}
+
+.our-blog {
+  padding: 60px 0;
+  background: #242424;
+}
+
+.recent-posts .title h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  color: #c0aa83;
+}
+
+@media screen and (max-width: 759px) {
+  .recent-posts .title h2 {
+    font-size: 1.5em;
+  }
+}
+
+.recent-posts .title h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3.5em;
+  color: #f6f6f6;
+}
+
+@media screen and (max-width: 759px) {
+  .recent-posts .title h3 {
+    font-size: 2.5em;
+  }
+}
+
+.recent-posts .title p {
+  font-family: "Kanit", sans-serif;
+  font-size: 9em;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -20px;
+  color: #f6f6f6;
+  opacity: .05;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .recent-posts .title p {
+    font-size: 7em;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .recent-posts .title p {
+    font-size: 4.5em;
+  }
+}
+
+.recent-posts .description {
+  margin-top: 20px;
+}
+
+.recent-posts .btn {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.125em;
+  max-width: 150px;
+  vertical-align: middle;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: .3s;
+  background-color: #c0aa83;
+  color: #f6f6f6;
+  margin: 0 auto;
+}
+
+.recent-posts .btn:hover {
+  transition: .3s;
+  background-color: #af9361;
+}
+
+.recent-posts .btn:active {
+  transform: translateY(2px);
+}
+
+.posts-item {
+  transition: all .3s ease;
+  width: 300px;
+  margin: 20px 0;
+}
+
+.posts-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.posts-item h4 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5em;
+  color: #c0aa83;
+  margin: 10px 0;
+}
+
+.posts-item h4:hover {
+  color: #f6f6f6;
+}
+
+.posts-item p {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  color: #f6f6f6;
+}
+
+.posts-item .posts-item-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.posts-item .posts-item-wrapper:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .3s ease;
+  opacity: .4;
+  z-index: 10;
+  pointer-events: none;
+  width: 100%;
+  height: 250px;
+}
+
+.posts-item .posts-item-img {
+  overflow: hidden;
+  transition: all .3s ease;
+  position: relative;
+}
+
+.posts-item:hover .posts-item-img img {
+  transform: scale(1.05);
+  transition: all .3s ease-in;
 }

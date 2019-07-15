@@ -92,3 +92,23 @@
         font-size: 4.5em;
     }
 }
+
+@mixin wrapper($width, $height) {
+    overflow: hidden;
+    position: relative;
+    width: $width;
+    height: $height;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .3s ease;
+        opacity: .4;
+        z-index: 10;
+        pointer-events: none;
+        width: $width;
+        height: $height;
+    }
+}
