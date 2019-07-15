@@ -96,6 +96,7 @@
         }
         @include device(s) {
             height: 220px;
+            width: 90%;
             margin: 20px auto 0 auto;
         }
     }

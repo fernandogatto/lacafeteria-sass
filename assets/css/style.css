@@ -219,19 +219,23 @@ table {
   clear: both;
 }
 
-nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title p, .who-we-are .description p, .services-item, .opening-hours .title h3 {
+nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title p, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title p, .our-menu .btn {
   text-align: center;
 }
 
-nav.mobile-menu .logo, .main-msg .btn {
+.drinks-item {
+  text-align: left;
+}
+
+nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn {
   text-decoration: none;
 }
 
-.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title p {
+.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title p, .our-menu .title p {
   position: absolute;
 }
 
-.hamburger-menu, .who-we-are .title {
+.hamburger-menu, .who-we-are .title, .our-menu .title {
   position: relative;
 }
 
@@ -239,11 +243,11 @@ nav.mobile-menu .mobile-menu-overlay {
   position: fixed;
 }
 
-nav.mobile-menu, .services, .opening-hours {
+nav.mobile-menu, .services, .opening-hours, .drinks {
   display: flex;
 }
 
-.hamburger-wrapper, .hamburger-menu, .main-msg .btn {
+.hamburger-wrapper, .hamburger-menu, .main-msg .btn, .our-menu .btn {
   display: block;
 }
 
@@ -251,11 +255,11 @@ nav.mobile-menu .mobile-menu-overlay {
   display: none;
 }
 
-.services, .opening-hours {
+.services, .opening-hours, .drinks {
   flex-direction: row;
 }
 
-.services {
+.services, .drinks {
   flex-flow: row wrap;
 }
 
@@ -263,7 +267,7 @@ nav.mobile-menu {
   align-items: center;
 }
 
-.services {
+.services, .drinks {
   justify-content: space-around;
 }
 
@@ -605,6 +609,107 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 @media screen and (max-width: 759px) {
   .opening-hours img {
     height: 220px;
+    width: 90%;
     margin: 20px auto 0 auto;
   }
+}
+
+.our-drinks {
+  padding: 60px 0;
+  background: linear-gradient(rgba(192, 170, 131, 0.7), rgba(192, 170, 131, 0.8)), url("../img/bg-drinks.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.our-menu .title h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  color: #f6f6f6;
+}
+
+@media screen and (max-width: 759px) {
+  .our-menu .title h2 {
+    font-size: 1.5em;
+  }
+}
+
+.our-menu .title h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3.5em;
+  color: #242424;
+}
+
+@media screen and (max-width: 759px) {
+  .our-menu .title h3 {
+    font-size: 2.5em;
+  }
+}
+
+.our-menu .title p {
+  font-family: "Kanit", sans-serif;
+  font-size: 9em;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -20px;
+  color: #242424;
+  opacity: .05;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .our-menu .title p {
+    font-size: 7em;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .our-menu .title p {
+    font-size: 4.5em;
+  }
+}
+
+.our-menu .btn {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.125em;
+  max-width: 150px;
+  vertical-align: middle;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: .3s;
+  background-color: #f6f6f6;
+  color: #242424;
+  margin: 0 auto;
+}
+
+.our-menu .btn:hover {
+  transition: .3s;
+  background-color: #dddddd;
+}
+
+.our-menu .btn:active {
+  transform: translateY(2px);
+}
+
+.drinks {
+  padding: 20px;
+}
+
+.drinks-item {
+  border: 5px solid #f6f6f6;
+  padding: 10px 20px 20px 20px;
+  margin: 10px 0;
+  width: 600px;
+}
+
+.drinks-item h4 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 0;
+}
+
+.drinks-item p {
+  font-size: 1em;
 }

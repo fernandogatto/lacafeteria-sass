@@ -1,0 +1,53 @@
+.our-drinks {
+    padding: 60px 0;
+    background: linear-gradient( rgba(192, 170, 131, .7), rgba(192, 170, 131, .8) ), url('../img/bg-drinks.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.our-menu {
+    .title {
+        @extend %position-relative;
+        h2 {
+            @include title-section($light);
+        }
+        h3 {
+            @include subtitle-section($dark);
+        }
+        p {
+            @include text-behind-title-section($dark);
+        }
+    }
+    .btn {
+        @include btn(light);
+        margin: 0 auto;
+    }
+}
+
+.drinks {
+    @extend %d-flex;
+    @extend %flex-direction-row;
+    @extend %flex-flow-row-wrap;
+    @extend %flex-justify-content-space-around;
+    padding: 20px;
+}
+
+.drinks-item {
+    @extend %text-align-left;
+    border: 5px solid $light;
+    padding: 10px 20px 20px 20px;
+    margin: 10px 0;
+    width: $l-device / 2;
+    h4 {
+        font-family: $font-secondary;
+        font-size: 1.5em;
+        padding: 10px 0;
+    }
+    p  {
+        font-size: 1em;
+    }
+}
