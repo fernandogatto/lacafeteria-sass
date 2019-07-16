@@ -2,6 +2,7 @@
 @mixin font-primary($size) {
     font-family: $font-primary;
     font-size: $size;
+    line-height: $size * 1.5;
 }
 
 @mixin font-secondary($size)  {

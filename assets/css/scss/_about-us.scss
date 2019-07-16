@@ -21,7 +21,7 @@
         h3 {
             @include subtitle-section($primary);
         }
-        p {
+        h4 {
             @include text-behind-title-section($dark);
         }
     }
@@ -47,7 +47,7 @@
     padding: 20px;
     margin: 20px 0;
     width: $l-device / 5;
-    height: $l-device / 5;
+    height: $l-device / 4;
     img {
         margin: 0 auto;
     }

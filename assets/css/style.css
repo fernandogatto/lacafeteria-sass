@@ -219,7 +219,7 @@ table {
   clear: both;
 }
 
-nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title p, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title p, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title p, .recent-posts .btn {
+nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title h4, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn {
   text-align: center;
 }
 
@@ -231,7 +231,11 @@ nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .post
   text-decoration: none;
 }
 
-.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title p, .our-menu .title p, .recent-posts .title p {
+.posts-item .post-date {
+  text-transform: uppercase;
+}
+
+.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title h4, .our-menu .title h4, .recent-posts .title h4 {
   position: absolute;
 }
 
@@ -284,6 +288,7 @@ nav.mobile-menu .mobile-menu-overlay ul {
 p {
   font-family: "Lato", sans-serif;
   font-size: 1.125em;
+  line-height: 1.6875em;
 }
 
 .bg-primary {
@@ -505,7 +510,7 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   }
 }
 
-.who-we-are .title p {
+.who-we-are .title h4 {
   font-family: "Kanit", sans-serif;
   font-size: 9em;
   transform: translateX(-50%);
@@ -516,13 +521,13 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
-  .who-we-are .title p {
+  .who-we-are .title h4 {
     font-size: 7em;
   }
 }
 
 @media screen and (max-width: 759px) {
-  .who-we-are .title p {
+  .who-we-are .title h4 {
     font-size: 4.5em;
   }
 }
@@ -540,7 +545,7 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   padding: 20px;
   margin: 20px 0;
   width: 240px;
-  height: 240px;
+  height: 300px;
 }
 
 .services-item img {
@@ -649,7 +654,7 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   }
 }
 
-.our-menu .title p {
+.our-menu .title h4 {
   font-family: "Kanit", sans-serif;
   font-size: 9em;
   transform: translateX(-50%);
@@ -660,13 +665,13 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
-  .our-menu .title p {
+  .our-menu .title h4 {
     font-size: 7em;
   }
 }
 
 @media screen and (max-width: 759px) {
-  .our-menu .title p {
+  .our-menu .title h4 {
     font-size: 4.5em;
   }
 }
@@ -743,7 +748,7 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   }
 }
 
-.recent-posts .title p {
+.recent-posts .title h4 {
   font-family: "Kanit", sans-serif;
   font-size: 9em;
   transform: translateX(-50%);
@@ -754,13 +759,13 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
-  .recent-posts .title p {
+  .recent-posts .title h4 {
     font-size: 7em;
   }
 }
 
 @media screen and (max-width: 759px) {
-  .recent-posts .title p {
+  .recent-posts .title h4 {
     font-size: 4.5em;
   }
 }
@@ -808,16 +813,26 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   font-size: 1.5em;
   color: #c0aa83;
   margin: 10px 0;
+  transition: .3s;
 }
 
 .posts-item h4:hover {
   color: #f6f6f6;
+  transition: .3s;
 }
 
 .posts-item p {
   font-family: "Lato", sans-serif;
   font-size: 1em;
+  line-height: 1.5em;
   color: #f6f6f6;
+}
+
+.posts-item .post-date {
+  border-bottom: 5px solid #c0aa83;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-family: "Kanit", sans-serif;
 }
 
 .posts-item .posts-item-wrapper {

@@ -12,7 +12,7 @@
         h3 {
             @include subtitle-section($light);
         }
-        p {
+        h4 {
             @include text-behind-title-section($light);
         }
     }
@@ -48,13 +48,22 @@
         @include font-secondary(1.5em);
         color: $primary;
         margin: 10px 0;
+        transition: .3s;
         &:hover {
             color: $light;
+            transition: .3s;
         }
     }
     p {
         @include font-primary(1em);
         color: $light;
+    }
+    .post-date {
+        border-bottom: 5px solid $primary;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        @extend %uppercase;
+        font-family: $font-secondary;
     }
     .posts-item-wrapper {
         @include wrapper(100%,250px);
