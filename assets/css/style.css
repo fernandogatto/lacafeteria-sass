@@ -219,7 +219,7 @@ table {
   clear: both;
 }
 
-nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title h4, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn {
+nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title h4, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn, .clients .title h2, .clients .title h3, .clients .title h4 {
   text-align: center;
 }
 
@@ -235,11 +235,11 @@ nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .post
   text-transform: uppercase;
 }
 
-.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title h4, .our-menu .title h4, .recent-posts .title h4 {
+.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title h4, .our-menu .title h4, .recent-posts .title h4, .clients .title h4 {
   position: absolute;
 }
 
-.hamburger-menu, .who-we-are .title, .our-menu .title, .recent-posts .title {
+.hamburger-menu, .who-we-are .title, .our-menu .title, .recent-posts .title, .clients .title {
   position: relative;
 }
 
@@ -546,6 +546,7 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   margin: 20px 0;
   width: 240px;
   height: 300px;
+  transition: .3s;
 }
 
 .services-item img {
@@ -556,6 +557,11 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   font-family: "Kanit", sans-serif;
   font-size: 1.5em;
   padding: 10px 0;
+}
+
+.services-item:hover {
+  background: #c0aa83;
+  transition: .3s;
 }
 
 @media screen and (max-width: 759px) {
@@ -707,6 +713,7 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   padding: 10px 20px 20px 20px;
   margin: 10px 0;
   width: 600px;
+  transition: .3s;
 }
 
 .drinks-item h4 {
@@ -717,6 +724,11 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 
 .drinks-item p {
   font-size: 1em;
+}
+
+.drinks-item:hover {
+  background: #f6f6f6;
+  transition: .3s;
 }
 
 .our-blog {
@@ -865,4 +877,55 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 .posts-item:hover .posts-item-img img {
   transform: scale(1.05);
   transition: all .3s ease-in;
+}
+
+.our-clients {
+  padding: 60px 0;
+  background: #f6f6f6;
+}
+
+.clients .title h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  color: #242424;
+}
+
+@media screen and (max-width: 759px) {
+  .clients .title h2 {
+    font-size: 1.5em;
+  }
+}
+
+.clients .title h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3.5em;
+  color: #c0aa83;
+}
+
+@media screen and (max-width: 759px) {
+  .clients .title h3 {
+    font-size: 2.5em;
+  }
+}
+
+.clients .title h4 {
+  font-family: "Kanit", sans-serif;
+  font-size: 9em;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -20px;
+  color: #242424;
+  opacity: .05;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .clients .title h4 {
+    font-size: 7em;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .clients .title h4 {
+    font-size: 4.5em;
+  }
 }

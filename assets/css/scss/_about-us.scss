@@ -48,6 +48,7 @@
     margin: 20px 0;
     width: $l-device / 5;
     height: $l-device / 4;
+    transition: .3s;
     img {
         margin: 0 auto;
     }
@@ -55,6 +56,10 @@
         font-family: $font-secondary;
         font-size: 1.5em;
         padding: 10px 0;
+    }
+    &:hover {
+        background: $primary;
+        transition: .3s;
     }
 }
 
