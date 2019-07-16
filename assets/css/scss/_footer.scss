@@ -1,0 +1,43 @@
+.footer {
+    @extend %text-align-center;
+    padding: 30px 0;
+    background: $primary;
+    h4 {
+        @include font-secondary(1.5em);
+        color: $dark;
+    }
+    a {
+        @extend %no-text-decoration;
+        color: $dark;
+        transition: .3s;
+        &:hover {
+            color: $light;
+            transition: .3s;
+        }
+    }
+    .footer-item {
+        margin-bottom: 10px;
+    }
+    @include device(l) {
+        .content {
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            text-align: left;
+        }
+        .about {
+            width: $l-device / 4;
+        }
+        .pages {
+            width: $l-device / 8;
+        }
+    }
+}
+
+#copyright {
+    background: darken($primary, 10%);
+    p {
+        @extend %text-align-center;
+    }
+}

@@ -219,7 +219,7 @@ table {
   clear: both;
 }
 
-nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title h4, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn, .clients .title h2, .clients .title h3, .clients .title h4 {
+nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title h4, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn, .clients .title h2, .clients .title h3, .clients .title h4, .footer, #copyright p {
   text-align: center;
 }
 
@@ -227,7 +227,7 @@ nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .wh
   text-align: left;
 }
 
-nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .posts-item a {
+nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .posts-item a, .footer a {
   text-decoration: none;
 }
 
@@ -289,30 +289,6 @@ p {
   font-family: "Lato", sans-serif;
   font-size: 1.125em;
   line-height: 1.6875em;
-}
-
-.bg-primary {
-  background-color: #c0aa83;
-}
-
-.bg-dark {
-  background-color: #242424;
-}
-
-.bg-light {
-  background-color: #f6f6f6;
-}
-
-.text-primary {
-  color: #c0aa83;
-}
-
-.text-dark {
-  color: #242424;
-}
-
-.text-light {
-  color: #f6f6f6;
 }
 
 .visible {
@@ -928,4 +904,49 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   .clients .title h4 {
     font-size: 4.5em;
   }
+}
+
+.footer {
+  padding: 30px 0;
+  background: #c0aa83;
+}
+
+.footer h4 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5em;
+  color: #242424;
+}
+
+.footer a {
+  color: #242424;
+  transition: .3s;
+}
+
+.footer a:hover {
+  color: #f6f6f6;
+  transition: .3s;
+}
+
+.footer .footer-item {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .content {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .footer .about {
+    width: 300px;
+  }
+  .footer .pages {
+    width: 150px;
+  }
+}
+
+#copyright {
+  background: #af9361;
 }
