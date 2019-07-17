@@ -1,0 +1,119 @@
+.contact-us {
+    padding: 60px 0;
+    background: linear-gradient( rgba(192, 170, 131, .7), rgba(192, 170, 131, .8) );
+    .title {
+        @extend %position-relative;
+        h2 {
+            @include title-section($light);
+        }
+        h3 {
+            @include subtitle-section($dark);
+        }
+        h4 {
+            @include text-behind-title-section($dark);
+        }
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include device(l) {
+            flex-direction: row;
+        }
+    }
+}
+
+.contact-us form {
+    margin-top: 20px;
+    @include device(l) {
+        width: $l-device / 2;
+    }
+    label {
+        @extend %d-block;
+        @include font-secondary(1.125em);
+        color: $dark;
+        margin: 10px 0;
+    }
+    input[type="text"], input[type="email"], textarea {
+        @include font-primary(1.125em);
+        color: $dark;
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        border: 2px solid $light;
+        background: $light;
+        &:hover, &:focus {
+            border-color: darken($light, 10%);
+            outline: none;
+        }
+    }
+    textarea {
+        height: 120px;
+    }
+    .btn {
+        @include btn(light);
+        border: none;
+        width: 150px;
+        line-height: 1.125em;
+        margin-top: 20px;
+    }
+}
+
+.contact-us .how-to-meet {
+    margin-top: 20px;
+    @extend %text-align-center;
+    @include device(l) {
+        text-align: left;
+    }
+    h3 {
+        @include font-secondary(1.5em);
+    }
+    .social {
+        margin-top: 10px;
+        a {
+            @extend %no-text-decoration;
+            color: $dark;
+            font-size: 1.5em;
+            transition: .3s;
+            &:hover {
+                color: $light;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.mapouter {
+    text-align: right;
+    height: 500px;
+    width: 100%;
+    margin: 0px auto;
+    #gmap_canvas {
+        height: 500px;
+        width: 100%;
+        @include device(m) {
+            height: 400px !important;
+        }
+        @include device(s) {
+            height: 400px !important;
+        }
+    }
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 500px;
+        width: 100%;
+        @include device(m) {
+            height: 400px !important;
+        }
+        @include device(s) {
+            height: 400px !important;
+        }
+    }
+    @include device(m) {
+        height: 400px !important;
+    }
+    @include device(s) {
+        height: 400px !important;
+    }
+}

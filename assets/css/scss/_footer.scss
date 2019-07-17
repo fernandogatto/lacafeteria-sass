@@ -18,6 +18,9 @@
     .footer-item {
         margin-bottom: 10px;
     }
+    .social {
+        margin-top: 10px;
+    }
     @include device(l) {
         .content {
             display: flex;

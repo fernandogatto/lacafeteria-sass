@@ -219,7 +219,7 @@ table {
   clear: both;
 }
 
-nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title h4, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn, .clients .title h2, .clients .title h3, .clients .title h4, .footer, #copyright p {
+nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title h4, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn, .clients .title h2, .clients .title h3, .clients .title h4, .footer, #copyright p, .contact-us .title h2, .contact-us .title h3, .contact-us .title h4, .contact-us form .btn, .contact-us .how-to-meet {
   text-align: center;
 }
 
@@ -227,7 +227,7 @@ nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .wh
   text-align: left;
 }
 
-nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .posts-item a, .footer a {
+nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .posts-item a, .footer a, .contact-us form .btn, .contact-us .how-to-meet .social a {
   text-decoration: none;
 }
 
@@ -235,11 +235,11 @@ nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .post
   text-transform: uppercase;
 }
 
-.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title h4, .our-menu .title h4, .recent-posts .title h4, .clients .title h4 {
+.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title h4, .our-menu .title h4, .recent-posts .title h4, .clients .title h4, .contact-us .title h4 {
   position: absolute;
 }
 
-.hamburger-menu, .who-we-are .title, .our-menu .title, .recent-posts .title, .clients .title {
+.hamburger-menu, .who-we-are .title, .our-menu .title, .recent-posts .title, .clients .title, .contact-us .title {
   position: relative;
 }
 
@@ -251,7 +251,7 @@ nav.mobile-menu, .services, .opening-hours, .drinks, .posts {
   display: flex;
 }
 
-.hamburger-wrapper, .hamburger-menu, .main-msg .btn, .our-menu .btn, .recent-posts .btn {
+.hamburger-wrapper, .hamburger-menu, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .contact-us form label, .contact-us form .btn {
   display: block;
 }
 
@@ -931,6 +931,10 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   margin-bottom: 10px;
 }
 
+.footer .social {
+  margin-top: 10px;
+}
+
 @media screen and (min-width: 1200px) {
   .footer .content {
     display: flex;
@@ -949,4 +953,215 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 
 #copyright {
   background: #af9361;
+}
+
+.contact-us {
+  padding: 60px 0;
+  background: linear-gradient(rgba(192, 170, 131, 0.7), rgba(192, 170, 131, 0.8));
+}
+
+.contact-us .title h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  color: #f6f6f6;
+}
+
+@media screen and (max-width: 759px) {
+  .contact-us .title h2 {
+    font-size: 1.5em;
+  }
+}
+
+.contact-us .title h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3.5em;
+  color: #242424;
+}
+
+@media screen and (max-width: 759px) {
+  .contact-us .title h3 {
+    font-size: 2.5em;
+  }
+}
+
+.contact-us .title h4 {
+  font-family: "Kanit", sans-serif;
+  font-size: 9em;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -20px;
+  color: #242424;
+  opacity: .05;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .contact-us .title h4 {
+    font-size: 7em;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .contact-us .title h4 {
+    font-size: 4.5em;
+  }
+}
+
+.contact-us .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-us .description {
+    flex-direction: row;
+  }
+}
+
+.contact-us form {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-us form {
+    width: 600px;
+  }
+}
+
+.contact-us form label {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.125em;
+  color: #242424;
+  margin: 10px 0;
+}
+
+.contact-us form input[type="text"], .contact-us form input[type="email"], .contact-us form textarea {
+  font-family: "Lato", sans-serif;
+  font-size: 1.125em;
+  line-height: 1.6875em;
+  color: #242424;
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  border: 2px solid #f6f6f6;
+  background: #f6f6f6;
+}
+
+.contact-us form input[type="text"]:hover, .contact-us form input[type="text"]:focus, .contact-us form input[type="email"]:hover, .contact-us form input[type="email"]:focus, .contact-us form textarea:hover, .contact-us form textarea:focus {
+  border-color: #dddddd;
+  outline: none;
+}
+
+.contact-us form textarea {
+  height: 120px;
+}
+
+.contact-us form .btn {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.125em;
+  max-width: 150px;
+  vertical-align: middle;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: .3s;
+  background-color: #f6f6f6;
+  color: #242424;
+  border: none;
+  width: 150px;
+  line-height: 1.125em;
+  margin-top: 20px;
+}
+
+.contact-us form .btn:hover {
+  transition: .3s;
+  background-color: #dddddd;
+}
+
+.contact-us form .btn:active {
+  transform: translateY(2px);
+}
+
+.contact-us .how-to-meet {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-us .how-to-meet {
+    text-align: left;
+  }
+}
+
+.contact-us .how-to-meet h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5em;
+}
+
+.contact-us .how-to-meet .social {
+  margin-top: 10px;
+}
+
+.contact-us .how-to-meet .social a {
+  color: #242424;
+  font-size: 1.5em;
+  transition: .3s;
+}
+
+.contact-us .how-to-meet .social a:hover {
+  color: #f6f6f6;
+  transition: .3s;
+}
+
+.mapouter {
+  text-align: right;
+  height: 500px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.mapouter #gmap_canvas {
+  height: 500px;
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .mapouter #gmap_canvas {
+    height: 400px !important;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .mapouter #gmap_canvas {
+    height: 400px !important;
+  }
+}
+
+.mapouter .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 100%;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .mapouter .gmap_canvas {
+    height: 400px !important;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .mapouter .gmap_canvas {
+    height: 400px !important;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .mapouter {
+    height: 400px !important;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .mapouter {
+    height: 400px !important;
+  }
 }
