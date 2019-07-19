@@ -94,3 +94,44 @@
         padding: 0 5px;
     }
 }
+
+.header-post {
+    @extend %position-relative;
+    .main-msg {
+        @extend %position-absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        p {
+            @include font-secondary(7em);
+        }
+        @include device(m) {
+            p {
+                font-size: 5em;
+            }
+        }
+        @include device(s) {
+            p {
+                font-size: 3em;
+            }
+        }
+    }
+}
+
+.body-post {
+    padding: 60px 0;
+    .post-date {
+        border-bottom: 5px solid $primary;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        @extend %uppercase;
+        font-family: $font-secondary;
+        color: $dark;
+    }
+    .content {
+        margin-bottom: 40px;
+    }
+    .btn {
+        @include btn(primary);
+        margin: 0 auto;
+    }
+}
