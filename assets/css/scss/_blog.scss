@@ -78,3 +78,19 @@
         transition: all .3s ease-in;
     }
 }
+
+.paginate {
+    @extend %d-flex;
+    @extend %flex-direction-row;
+    @extend %flex-justify-content-center;
+    a {
+        @extend %no-text-decoration;
+        color: $light;
+        margin: 0 5px;
+    }
+    .active {
+        background: $primary;
+        color: $dark;
+        padding: 0 5px;
+    }
+}

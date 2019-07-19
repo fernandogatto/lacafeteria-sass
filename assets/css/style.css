@@ -227,7 +227,7 @@ nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .wh
   text-align: left;
 }
 
-nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .posts-item a, .footer a, .contact-us form .btn, .contact-us .how-to-meet .social a {
+nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .posts-item a, .paginate a, .footer a, .contact-us form .btn, .contact-us .how-to-meet .social a {
   text-decoration: none;
 }
 
@@ -247,7 +247,7 @@ nav.mobile-menu .mobile-menu-overlay {
   position: fixed;
 }
 
-nav.mobile-menu, .services, .opening-hours, .drinks, .posts {
+nav.mobile-menu, .services, .opening-hours, .drinks, .posts, .paginate {
   display: flex;
 }
 
@@ -259,7 +259,7 @@ nav.mobile-menu .mobile-menu-overlay {
   display: none;
 }
 
-.services, .opening-hours, .drinks, .posts {
+.services, .opening-hours, .drinks, .posts, .paginate {
   flex-direction: row;
 }
 
@@ -269,6 +269,10 @@ nav.mobile-menu .mobile-menu-overlay {
 
 nav.mobile-menu {
   align-items: center;
+}
+
+.paginate {
+  justify-content: center;
 }
 
 .services, .drinks, .posts {
@@ -853,6 +857,17 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 .posts-item:hover .posts-item-img img {
   transform: scale(1.05);
   transition: all .3s ease-in;
+}
+
+.paginate a {
+  color: #f6f6f6;
+  margin: 0 5px;
+}
+
+.paginate .active {
+  background: #c0aa83;
+  color: #242424;
+  padding: 0 5px;
 }
 
 .our-clients {
