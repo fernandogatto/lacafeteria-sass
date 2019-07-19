@@ -219,7 +219,7 @@ table {
   clear: both;
 }
 
-nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .who-we-are .title h3, .who-we-are .title h4, .who-we-are .description p, .services-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn, .clients .title h2, .clients .title h3, .clients .title h4, .footer, #copyright p, .contact-us .title h2, .contact-us .title h3, .contact-us .title h4, .contact-us form .btn, .contact-us .how-to-meet {
+nav.mobile-menu .mobile-menu-overlay, .main-msg .btn, .who-we-are .title h2, .our-values .title h2, .our-mission .title h2, .who-we-are .title h3, .our-values .title h3, .our-mission .title h3, .who-we-are .title h4, .our-values .title h4, .our-mission .title h4, .who-we-are .description p, .our-values .description p, .our-mission .description p, .values-item, .opening-hours .title h3, .our-menu .title h2, .our-menu .title h3, .our-menu .title h4, .our-menu .btn, .recent-posts .title h2, .recent-posts .title h3, .recent-posts .title h4, .recent-posts .btn, .clients .title h2, .clients .title h3, .clients .title h4, .footer, #copyright p, .contact-us .title h2, .contact-us .title h3, .contact-us .title h4, .contact-us form .btn, .contact-us .how-to-meet {
   text-align: center;
 }
 
@@ -235,11 +235,11 @@ nav.mobile-menu .logo, .main-msg .btn, .our-menu .btn, .recent-posts .btn, .post
   text-transform: uppercase;
 }
 
-.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title h4, .our-menu .title h4, .recent-posts .title h4, .clients .title h4, .contact-us .title h4 {
+.hamburger-menu:before, .hamburger-menu:after, .main-msg, .who-we-are .title h4, .our-values .title h4, .our-mission .title h4, .our-menu .title h4, .recent-posts .title h4, .clients .title h4, .contact-us .title h4 {
   position: absolute;
 }
 
-.hamburger-menu, .who-we-are .title, .our-menu .title, .recent-posts .title, .clients .title, .contact-us .title {
+.hamburger-menu, .who-we-are .title, .our-values .title, .our-mission .title, .our-menu .title, .recent-posts .title, .clients .title, .contact-us .title {
   position: relative;
 }
 
@@ -247,7 +247,7 @@ nav.mobile-menu .mobile-menu-overlay {
   position: fixed;
 }
 
-nav.mobile-menu, .services, .opening-hours, .drinks, .posts, .paginate {
+nav.mobile-menu, .values, .opening-hours, .drinks, .posts, .paginate {
   display: flex;
 }
 
@@ -259,11 +259,11 @@ nav.mobile-menu .mobile-menu-overlay {
   display: none;
 }
 
-.services, .opening-hours, .drinks, .posts, .paginate {
+.values, .opening-hours, .drinks, .posts, .paginate {
   flex-direction: row;
 }
 
-.services, .drinks, .posts {
+.values, .drinks, .posts {
   flex-flow: row wrap;
 }
 
@@ -275,7 +275,7 @@ nav.mobile-menu {
   justify-content: center;
 }
 
-.services, .drinks, .posts {
+.values, .drinks, .posts {
   justify-content: space-around;
 }
 
@@ -451,46 +451,49 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   }
 }
 
-.about-us {
+.bg-bottom-header {
   margin-top: -40px;
-  padding: 60px 0;
+  margin-bottom: 40px;
   background: url("../img/bg-bottom-header.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
 
+.about-us {
+  padding: 60px 0;
+}
+
 .about-us .content {
-  margin-top: 40px;
   background: url("../img/bg-about.png");
   background-position: 0 50%;
   background-repeat: no-repeat;
 }
 
-.who-we-are .title h2 {
+.who-we-are .title h2, .our-values .title h2, .our-mission .title h2 {
   font-family: "Kanit", sans-serif;
   font-size: 2em;
   color: #242424;
 }
 
 @media screen and (max-width: 759px) {
-  .who-we-are .title h2 {
+  .who-we-are .title h2, .our-values .title h2, .our-mission .title h2 {
     font-size: 1.5em;
   }
 }
 
-.who-we-are .title h3 {
+.who-we-are .title h3, .our-values .title h3, .our-mission .title h3 {
   font-family: "Kanit", sans-serif;
   font-size: 3.5em;
   color: #c0aa83;
 }
 
 @media screen and (max-width: 759px) {
-  .who-we-are .title h3 {
+  .who-we-are .title h3, .our-values .title h3, .our-mission .title h3 {
     font-size: 2.5em;
   }
 }
 
-.who-we-are .title h4 {
+.who-we-are .title h4, .our-values .title h4, .our-mission .title h4 {
   font-family: "Kanit", sans-serif;
   font-size: 9em;
   transform: translateX(-50%);
@@ -501,26 +504,30 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
-  .who-we-are .title h4 {
+  .who-we-are .title h4, .our-values .title h4, .our-mission .title h4 {
     font-size: 7em;
   }
 }
 
 @media screen and (max-width: 759px) {
-  .who-we-are .title h4 {
+  .who-we-are .title h4, .our-values .title h4, .our-mission .title h4 {
     font-size: 4.5em;
   }
 }
 
-.who-we-are .description {
+.who-we-are .description, .our-values .description, .our-mission .description {
   margin-top: 20px;
 }
 
-.services {
-  padding: 20px 0;
+.our-values {
+  margin-top: 40px;
 }
 
-.services-item {
+.our-mission {
+  margin-top: 20px;
+}
+
+.values-item {
   border: 5px solid #c0aa83;
   padding: 20px;
   margin: 20px 0;
@@ -529,19 +536,23 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   transition: .3s;
 }
 
-.services-item img {
+.values-item img {
   margin: 0 auto;
 }
 
-.services-item h4 {
+.values-item h4 {
   font-family: "Kanit", sans-serif;
   font-size: 1.5em;
   padding: 10px 0;
 }
 
-.services-item:hover {
+.values-item:hover {
   background: #c0aa83;
   transition: .3s;
+}
+
+.opening-hours {
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 759px) {

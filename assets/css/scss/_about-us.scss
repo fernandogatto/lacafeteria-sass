@@ -1,18 +1,21 @@
-.about-us {
+.bg-bottom-header {
     margin-top: -40px;
-    padding: 60px 0;
+    margin-bottom: 40px;
     background: url('../img/bg-bottom-header.png');
     background-position: 0 0;
     background-repeat: no-repeat;
+}
+
+.about-us {
+    padding: 60px 0;
     .content {
-        margin-top: 40px;
         background: url('../img/bg-about.png');
         background-position: 0 50%;
         background-repeat: no-repeat;
     }
 }
 
-.who-we-are {
+.who-we-are, .our-values, .our-mission {
     .title {
         @extend %position-relative;
         h2 {
@@ -33,15 +36,22 @@
     }
 }
 
-.services {
+.our-values {
+    margin-top: 40px;
+}
+
+.our-mission {
+    margin-top: 20px;
+}
+
+.values {
     @extend %d-flex;
     @extend %flex-direction-row;
     @extend %flex-flow-row-wrap;
     @extend %flex-justify-content-space-around;
-    padding: 20px 0;
 }
 
-.services-item {
+.values-item {
     @extend %text-align-center;
     border: 5px solid $primary;
     padding: 20px;
@@ -67,6 +77,7 @@
     @extend %d-flex;
     @extend %flex-direction-row;
     @extend %flex-justify-content-space-between;
+    margin-top: 20px;
     @include device(s) {
         flex-direction: column;
     }
