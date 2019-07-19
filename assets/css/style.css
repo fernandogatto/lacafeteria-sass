@@ -519,8 +519,9 @@ nav.mobile-menu .mobile-menu-overlay ul li a:hover {
   margin-top: 20px;
 }
 
-.our-values {
-  margin-top: 40px;
+.values-mission {
+  padding: 60px 0;
+  background: #f6f6f6;
 }
 
 .our-mission {
